@@ -29,8 +29,18 @@ def ShowMePrettySoup(UrlToShow):
   soup = BeautifulSoup(response.text, "html.parser")
   print(soup.prettify)
 
+def ShowMeLinks(UrlToShow):
+  response = requests.get(UrlToShow)
+  #print(response.text)
+  # Parse HTML and save to BeautifulSoup object¶
+  soup = BeautifulSoup(response.text, "html.parser")
+  #print(soup.find_all('a'))
+  for link in soup.find_all('a'):
+    print(link.get('href'))
+
 LinksToIndexPages = GetLinkList('https://members.nanaimochamber.bc.ca/list/','searchalpha')
 for x in LinksToIndexPages:
   print(x)
-
-ShowMePrettySoup(LinksToIndexPages[0])
+  
+ShowMeLinks(LinksToIndexPages[0])
+#ShowMePrettySoup(LinksToIndexPages[0])
