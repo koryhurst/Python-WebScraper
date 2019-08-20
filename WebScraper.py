@@ -22,14 +22,14 @@ def GetLinkList(UrlToSearch, SearchTerm): #or searchtermSSSS at some point
   return linklist
 #END FUNCTION GET LINKLIST	  
 
-def ShowMePrettySoup(UrlToShow):
+def ShowPrettySoup(UrlToShow):
   response = requests.get(UrlToShow)
   #print(response.text)
   # Parse HTML and save to BeautifulSoup object¶
   soup = BeautifulSoup(response.text, "html.parser")
   print(soup.prettify)
 
-def ShowMeLinks(UrlToShow):
+def ShowLinks(UrlToShow):
   response = requests.get(UrlToShow)
   #print(response.text)
   # Parse HTML and save to BeautifulSoup object¶
