@@ -6,19 +6,19 @@ import time
 from bs4 import BeautifulSoup
 
 # Set the URL you want to webscrape from
-url = 'http://web.mta.info/developers/turnstile.html'
+url = 'https://members.nanaimochamber.bc.ca/list/'
 
 # Connect to the URL
 response = requests.get(url)
 
+print(response)
 # Parse HTML and save to BeautifulSoup object¶
-soup = BeautifulSoup(response.text, "html.parser")
+#soup = BeautifulSoup(response.text, "html.parser")
 
 # To download the whole data set, let's do a for loop through all a tags
-for i in range(36,len(soup.findAll('a'))+1): #'a' tags are for links
-    one_a_tag = soup.findAll('a')[i]
-    link = one_a_tag['href']
-    download_url = 'http://web.mta.info/developers/'+ link
-    urllib.request.urlretrieve(download_url,'./'+link[link.find('/turnstile_')+1:]) 
-    time.sleep(1) #pause the code for a sec
-view rawwebscraping_nyc_mta.py hosted with ❤ by GitHub
+#for i in range(36,len(soup.findAll('a'))+1): #'a' tags are for links
+#    one_a_tag = soup.findAll('a')[i]
+#    link = one_a_tag['href']
+#    download_url = 'http://web.mta.info/developers/'+ link
+#    urllib.request.urlretrieve(download_url,'./'+link[link.find('/turnstile_')+1:]) 
+#    time.sleep(1) #pause the code for a sec
