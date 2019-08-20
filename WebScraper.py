@@ -13,7 +13,7 @@ def GetLinkList(UrlToSearch, SearchTerm): #or searchtermSSSS at some point
   soup = BeautifulSoup(response.text, "html.parser")
   linklist = []
   # To download the whole data set, let's do a for loop through all a tags
-  print(soup.findAll('a'))
+  #print(soup.findAll('a'))
   for i in range(36, len(soup.findAll('a')),1): #'a' tags are for links
     one_a_tag = soup.findAll('a')[i]
     link = one_a_tag['href']
@@ -39,8 +39,18 @@ def ShowLinks(UrlToShow):
     print(link.get('href'))
 
 LinksToIndexPages = GetLinkList('https://members.nanaimochamber.bc.ca/list/','searchalpha')
-for x in LinksToIndexPages:
-  print(x)
+for IndexPage in LinksToIndexPages:
+  print(IndexPage)
+  LinksToBusinesPages = GetLinkList(IndexPage,'t/member/')
   
-ShowMeLinks(LinksToIndexPages[0])
+  for x in LinksToBusinesPages:
+    print(x)
+
+#<a href="https://members.nanaimochamber.bc.ca/list/member/edgewood-232" target="_blank" alt="Edgewood">
+#                <span class="gz-img-placeholder">Edgewood</span>
+#            </a>
+			
+
+
+#ShowMeLinks(LinksToIndexPages[0])
 #ShowMePrettySoup(LinksToIndexPages[0])
