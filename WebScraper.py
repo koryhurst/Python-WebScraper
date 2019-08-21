@@ -5,6 +5,7 @@ import urllib.request
 import time
 from bs4 import BeautifulSoup
 
+#Beautiful Soup Functions
 def GetLinkList(UrlToSearch, SearchTerm): #or searchtermSSSS at some point
   # Connect to the URL
   response = requests.get(UrlToSearch)
@@ -20,7 +21,6 @@ def GetLinkList(UrlToSearch, SearchTerm): #or searchtermSSSS at some point
     if SearchTerm in link:
       linklist.append(link)
   return linklist
-#END FUNCTION GET LINKLIST	  
 
 def ShowPrettySoup(UrlToShow):
   response = requests.get(UrlToShow)
@@ -37,6 +37,11 @@ def ShowLinks(UrlToShow):
   #print(soup.find_all('a'))
   for link in soup.find_all('a'):
     print(link.get('href'))
+
+#List Functions
+def RemoveDupesFromList(ListToClean):
+  return list(dict.fromkeys(ListToClean))
+  
 
 LinksToIndexPages = GetLinkList('https://members.nanaimochamber.bc.ca/list/','searchalpha')
 for IndexPage in LinksToIndexPages:
