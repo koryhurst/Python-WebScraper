@@ -45,11 +45,11 @@ def RemoveDupesFromList(ListToClean):
 
 LinksToIndexPages = GetLinkList('https://members.nanaimochamber.bc.ca/list/','searchalpha')
 for IndexPage in LinksToIndexPages:
-  print(IndexPage)
+  #print(IndexPage)
   LinksToBusinesPages = GetLinkList(IndexPage,'t/member/')
   
-  for x in LinksToBusinesPages:
-    print(x)
+  for BusinessLink in RemoveDupesFromList(LinksToBusinesPages):
+    print(BusinessLink)
 
 #<a href="https://members.nanaimochamber.bc.ca/list/member/edgewood-232" target="_blank" alt="Edgewood">
 #                <span class="gz-img-placeholder">Edgewood</span>
