@@ -1,77 +1,26 @@
 
 # Import libraries
-import requests
-import urllib.request
 import time
 import csv
+import sys
 
-from bs4 import BeautifulSoup
+#sys.path.append('D:/Users/Kory/Documents/_HomeAndWork/GitHub/Python-FunctionLibrary')
+sys.path.append('../Python-FunctionLibrary')
+import BeautifulSoupFunctions
+import ListFunctions
 
-#Beautiful Soup Functions
-def GetLinkList(UrlToSearch, SearchTerm): #or searchtermSSSS at some point
-  # Connect to the URL
-  response = requests.get(UrlToSearch)
-  #print(response.text)
-  # Parse HTML and save to BeautifulSoup object¶
-  soup = BeautifulSoup(response.text, "html.parser")
-  linklist = []
-  # To download the whole data set, let's do a for loop through all a tags
-  #print(soup.findAll('a'))
-  for i in range(36, len(soup.findAll('a')),1): #'a' tags are for links
-    one_a_tag = soup.findAll('a')[i]
-    link = one_a_tag['href']
-    if SearchTerm in link:
-      linklist.append(link)
-  return linklist
-
-def GetSoup(UrlToGet):
-  response = requests.get(UrlToGet)
-  #print(response.text)
-  # Parse HTML and save to BeautifulSoup object¶
-  soup = BeautifulSoup(response.text, "html.parser")
-  return soup
-  
-def SearchSoup(UrlToSearch, SearchTerm): #or searchtermSSSS at some point
-  # Connect to the URL
-  response = requests.get(UrlToSearch)
-  #print(response.text)
-  # Parse HTML and save to BeautifulSoup object¶
-  soup = BeautifulSoup(response.text, "html.parser")
-  return soup.findAll(SearchTerm)
-
-def ShowPrettySoup(UrlToShow):
-  response = requests.get(UrlToShow)
-  #print(response.text)
-  # Parse HTML and save to BeautifulSoup object¶
-  soup = BeautifulSoup(response.text, "html.parser")
-  print(soup.prettify)
-
-def ShowLinks(UrlToShow):
-  response = requests.get(UrlToShow)
-  #print(response.text)
-  # Parse HTML and save to BeautifulSoup object¶
-  soup = BeautifulSoup(response.text, "html.parser")
-  #print(soup.find_all('a'))
-  for link in soup.find_all('a'):
-    print(link.get('href'))
-
-#List Functions
-def RemoveDupesFromList(ListToClean):
-  return list(dict.fromkeys(ListToClean))
-
-
-LinksToIndexPages = GetLinkList('https://members.nanaimochamber.bc.ca/list/','searchalpha')
+LinksToIndexPages = BeautifulSoupFunctions.GetLinkList('https://members.nanaimochamber.bc.ca/list/','searchalpha')
 with open('NanaimoChamber.csv', mode='w') as writeFile:
   NanaimoChamberCSV = csv.writer(writeFile, delimiter=',', lineterminator='\n', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     
   for IndexPage in LinksToIndexPages:
     #print(IndexPage)
-    LinksToBusinesPages = GetLinkList(IndexPage,'t/member/')  
-    for BusinessLink in RemoveDupesFromList(LinksToBusinesPages):
+    LinksToBusinesPages = BeautifulSoupFunctions.GetLinkList(IndexPage,'t/member/')  
+    for BusinessLink in ListFunctions.RemoveDupesFromList(LinksToBusinesPages):
       #print(BusinessLink)
       BusinessID = BusinessLink[BusinessLink.rfind("-", 0)+1:len(BusinessLink)]
       print(BusinessID)
-      BusinessSoup = GetSoup(BusinessLink)
+      BusinessSoup = BeautifulSoupFunctions.GetSoup(BusinessLink)
       #ShowPrettySoup(BusinessLink)
       if len(BusinessSoup.find_all("span", class_="gz-cat"))>0:
         BusinessName = BusinessSoup.find_all("h1", class_="gz-pagetitle")[0].getText()
