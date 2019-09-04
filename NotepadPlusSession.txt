@@ -1,0 +1,8 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="0">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="847" startPos="0" endPos="0" selMode="0" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Users\Kory\Documents\_HomeAndWork\GitHub\Python-WebScraper\WebScraper.py" backupFilePath="" originalFileLastModifTimestamp="1680046919" originalFileLastModifTimestampHigh="30759409" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="11776" mapWrapIndentMode="-1" mapIsWrap="no" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>
