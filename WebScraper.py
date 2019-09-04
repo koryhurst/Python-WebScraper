@@ -1,6 +1,5 @@
 
 # Import libraries
-import time
 import csv
 import sys
 
