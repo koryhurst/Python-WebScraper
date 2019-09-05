@@ -8,13 +8,13 @@ sys.path.append('../Python-FunctionLibrary')
 import BeautifulSoupFunctions
 import ListFunctions
 
-LinksToIndexPages = BeautifulSoupFunctions.GetLinkList('https://members.nanaimochamber.bc.ca/list/','searchalpha')
+LinksToIndexPages = BeautifulSoupFunctions.GetLinkListOLD('https://members.nanaimochamber.bc.ca/list/','searchalpha')
 with open('NanaimoChamber.csv', mode='w') as writeFile:
   NanaimoChamberCSV = csv.writer(writeFile, delimiter=',', lineterminator='\n', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     
   for IndexPage in LinksToIndexPages:
     #print(IndexPage)
-    LinksToBusinesPages = BeautifulSoupFunctions.GetLinkList(IndexPage,'t/member/')  
+    LinksToBusinesPages = BeautifulSoupFunctions.GetLinkListOLD(IndexPage,'t/member/')  
     for BusinessLink in ListFunctions.RemoveDupesFromList(LinksToBusinesPages):
       #print(BusinessLink)
       BusinessID = BusinessLink[BusinessLink.rfind("-", 0)+1:len(BusinessLink)]
