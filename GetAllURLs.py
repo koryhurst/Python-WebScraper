@@ -19,15 +19,16 @@ myresult = mycursor.fetchall()
 for BaseURL in myresult:
   #Just skipping it for now
   if BaseURL[1] != "http://www.ablerecognition.com":
+    wait = input("PRESS ENTER TO CONTINUE")
     print(BaseURL[1])
     #wait = input("PRESS ENTER TO CONTINUE")
     #BeautifulSoupFunctions.ShowLinks(BaseURL[1])
-    AllUrlsOnASite = BeautifulSoupFunctions.GetSiteMap(BaseURL[1], DatabaseDetails)
-    for URL in AllUrlsOnASite:
-      AllLinks.append((BaseURL[0],URL))
+    BeautifulSoupFunctions.GetSiteMap(BaseURL[0], BaseURL[1], DatabaseDetails)
+    #for URL in AllUrlsOnASite:
+    #  AllLinks.append((BaseURL[0],URL))
     #print(AllLinks)
-    mycursor.executemany(sql, AllLinks)
-    mydb.commit()
-    AllLinks.clear()
+    #mycursor.executemany(sql, AllLinks)
+    #mydb.commit()
+    #AllLinks.clear()
     #print(type(BaseURL))
 
