@@ -13,13 +13,14 @@ mydb = mysql.connector.connect(
   )
 
 mycursor = mydb.cursor()
-mycursor.execute("SELECT BusinessID, Website FROM tblbusiness")
+mycursor.execute("SELECT BusinessID, WebSite FROM tblbusiness order by BusinessID")
 myresult = mycursor.fetchall()
-
+print(myresult)
 for BaseURL in myresult:
   #Just skipping it for now
   if BaseURL[1] != "http://www.ablerecognition.com":
     #wait = input("PRESS ENTER TO CONTINUE")
-    print(BaseURL[1])
-    BeautifulSoupFunctions.GetSiteMap(BaseURL[0], BaseURL[1], DatabaseDetails)
+    if BaseURL[1] != "N/A":
+      print(BaseURL[1])
+      BeautifulSoupFunctions.GetSiteMap(BaseURL[0], BaseURL[1], DatabaseDetails)
     
