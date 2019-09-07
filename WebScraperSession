@@ -1,0 +1,21 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="4">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1091" startPos="46" endPos="34" selMode="0" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Users\Kory\Documents\_HomeAndWork\GitHub\Python-WebScraper\WebScraper.py" backupFilePath="" originalFileLastModifTimestamp="1289129878" originalFileLastModifTimestampHigh="30761895" mapFirstVisibleDisplayLine="0" mapFirstVisibleDocLine="0" mapLastVisibleDocLine="43" mapNbLine="43" mapHigherPos="-1" mapWidth="325" mapHeight="172" mapKByteInDoc="3" mapWrapIndentMode="1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1008" startPos="294" endPos="294" selMode="0" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Users\Kory\Documents\_HomeAndWork\GitHub\Python-MakeSiteMap\MakeSiteMapTest.py" backupFilePath="" originalFileLastModifTimestamp="1407660445" originalFileLastModifTimestampHigh="30761909" mapFirstVisibleDisplayLine="0" mapFirstVisibleDocLine="0" mapLastVisibleDocLine="43" mapNbLine="43" mapHigherPos="-1" mapWidth="329" mapHeight="172" mapKByteInDoc="0" mapWrapIndentMode="1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="384" startPos="538" endPos="420" selMode="0" lang="SQL" encoding="-1" userReadOnly="no" filename="D:\Users\Kory\Documents\_HomeAndWork\GitHub\WebSite-deadbase.koryhurst.com\dbbuild\NewBuildStep1.sql" backupFilePath="" originalFileLastModifTimestamp="1366152702" originalFileLastModifTimestampHigh="30761711" mapFirstVisibleDisplayLine="0" mapFirstVisibleDocLine="0" mapLastVisibleDocLine="43" mapNbLine="43" mapHigherPos="-1" mapWidth="315" mapHeight="172" mapKByteInDoc="1166" mapWrapIndentMode="1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="265" startPos="51" endPos="51" selMode="0" lang="SQL" encoding="-1" userReadOnly="no" filename="D:\Users\Kory\Documents\_HomeAndWork\GitHub\Python-WebScraper\MakeTable.sql" backupFilePath="" originalFileLastModifTimestamp="1910777323" originalFileLastModifTimestampHigh="30761834" mapFirstVisibleDisplayLine="0" mapFirstVisibleDocLine="0" mapLastVisibleDocLine="43" mapNbLine="43" mapHigherPos="-1" mapWidth="320" mapHeight="172" mapKByteInDoc="0" mapWrapIndentMode="1" mapIsWrap="no" />
+            <File firstVisibleLine="29" xOffset="0" scrollWidth="1206" startPos="3188" endPos="3188" selMode="0" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Users\Kory\Documents\_HomeAndWork\GitHub\Python-FunctionLibrary\BeautifulSoupFunctions.py" backupFilePath="" originalFileLastModifTimestamp="-1442485212" originalFileLastModifTimestampHigh="30762089" mapFirstVisibleDisplayLine="25" mapFirstVisibleDocLine="87" mapLastVisibleDocLine="130" mapNbLine="43" mapHigherPos="-1" mapWidth="325" mapHeight="172" mapKByteInDoc="4" mapWrapIndentMode="1" mapIsWrap="no">
+                <Fold line="6" />
+                <Fold line="29" />
+                <Fold line="49" />
+                <Fold line="56" />
+                <Fold line="64" />
+                <Fold line="71" />
+            </File>
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="287" startPos="0" endPos="0" selMode="0" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Users\Kory\Documents\_HomeAndWork\GitHub\Python-FunctionLibrary\ListFunctions.py" backupFilePath="" originalFileLastModifTimestamp="938660772" originalFileLastModifTimestampHigh="30761903" mapFirstVisibleDisplayLine="0" mapFirstVisibleDocLine="0" mapLastVisibleDocLine="43" mapNbLine="43" mapHigherPos="-1" mapWidth="320" mapHeight="172" mapKByteInDoc="0" mapWrapIndentMode="1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="679" startPos="822" endPos="822" selMode="0" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Users\Kory\Documents\_HomeAndWork\GitHub\Python-WebScraper\GetAllURLs.py" backupFilePath="" originalFileLastModifTimestamp="-1884709046" originalFileLastModifTimestampHigh="30762080" mapFirstVisibleDisplayLine="0" mapFirstVisibleDocLine="0" mapLastVisibleDocLine="43" mapNbLine="43" mapHigherPos="-1" mapWidth="329" mapHeight="172" mapKByteInDoc="0" mapWrapIndentMode="1" mapIsWrap="no" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>
