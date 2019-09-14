@@ -12,13 +12,14 @@ mydb = mysql.connector.connect(
   database=DatabaseDetails[3]
   )
 
+ExceptionList = ["http://www.ablerecognition.com", "http://www.vi.bbb.org"]
 mycursor = mydb.cursor()
 mycursor.execute("SELECT BusinessID, WebSite FROM tblbusiness order by BusinessID")
 myresult = mycursor.fetchall()
 print(myresult)
 for BaseURL in myresult:
   #Just skipping it for now
-  if BaseURL[1] != "http://www.ablerecognition.com":
+  if BaseURL[1] not in ExceptionList:
     #wait = input("PRESS ENTER TO CONTINUE")
     if BaseURL[1] != "N/A":
       print(BaseURL[1])
